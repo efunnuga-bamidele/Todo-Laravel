@@ -66,6 +66,12 @@
         </style>
     </head>
     <body>
+        <br>
+        @if(Session::has('success'))
+        <div class="alert alert-success container" role="alert">
+            {{Session::get('success')}}
+        </div>
+        @endif
         <div class="flex-center position-ref container">
             @if (Route::has('login'))
                 <div class="top-right links">
