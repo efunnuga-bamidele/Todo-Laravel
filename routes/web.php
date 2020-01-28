@@ -39,11 +39,16 @@ Route::get('/todo/update/{id}', [
     'as' => 'todo.update'
 ]);
 
+Route::get('/todo/completed/{id}', [
+    'uses' => 'TodosController@completed',
+    'as' => 'todos.completed'
+]);
+
 Route::post('/create/todo', [
     'uses' => 'TodosController@store'
 ]);
 
 Route::post('/todo/save/{id}', [
     'uses' => 'TodosController@save',
-    'as' => 'todos.save'
+    'as' => 'todos.update'
 ]);
