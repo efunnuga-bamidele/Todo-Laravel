@@ -30,7 +30,14 @@ class TodosController extends Controller
 
     public function delete($id){
 
-        dd($id);
+        // dd($id);
+        $todo = Todo::find($id);
+
+        // dd($todo);
+        $todo->delete();
+
+        return redirect()->back();
+
 
     }
 
